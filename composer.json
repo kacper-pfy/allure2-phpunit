@@ -1,0 +1,26 @@
+{
+  "name": "kacper-wojtaszczyk/allure2-phpunit",
+  "description": "Allure adapter for PHPUnit",
+  "minimum-stability": "stable",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Kacper Wojtaszczyk",
+      "email": "kacper.wojtaszczyk95@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "~7.4",
+    "phpunit/phpunit": "^9.1",
+    "psr/event-dispatcher": "^1.0",
+    "marc-mabe/php-enum": "^4.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Allure2Adapter\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "Allure2Adapter\\Tests\\": "tests"
+  }
+}
