@@ -21,7 +21,9 @@
     }
   },
   "autoload-dev": {
-    "Allure2Adapter\\Tests\\": "tests"
+    "psr-4": {
+      "Allure2Adapter\\Tests\\": "tests"
+    }
   },
   "require-dev": {
     "fzaninotto/faker": "^1.9"
