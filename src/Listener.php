@@ -30,12 +30,12 @@ final class Listener implements
     BeforeTestHook
 {
     private Writer $writer;
-    private Storage $storage;
+    private Lifecycle $storage;
 
     public function __construct(string $outputDirectory, bool $deletePreviousResults = false)
     {
         $this->writer = new Writer($outputDirectory, $deletePreviousResults);
-        $this->storage = new Storage();
+        $this->storage = Lifecycle::create();
     }
 
     public function executeAfterIncompleteTest(string $test, string $message, float $time): void
