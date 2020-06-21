@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Allure2Adapter\Model;
 
+use Ramsey\Uuid\UuidInterface;
+
 final class TestResult extends ExecutableItem
 {
-    private string $uuid;
+    private UuidInterface $uuid;
     private string $historyId;
     private string $testCaseId;
     private string $rerunOf;

@@ -12,8 +12,8 @@
   "require": {
     "php": "~7.4",
     "phpunit/phpunit": "^9.1",
-    "psr/event-dispatcher": "^1.0",
-    "marc-mabe/php-enum": "^4.3"
+    "marc-mabe/php-enum": "^4.3",
+    "ramsey/uuid": "^4.0"
   },
   "autoload": {
     "psr-4": {
@@ -22,5 +22,8 @@
   },
   "autoload-dev": {
     "Allure2Adapter\\Tests\\": "tests"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "^1.9"
   }
 }

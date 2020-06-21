@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Allure2Adapter\Model;
 
+use Ramsey\Uuid\UuidInterface;
+
 final class TestResultContainer
 {
-    private string $uuid;
+    private UuidInterface $uuid;
     private string $name;
     /**
-     * @var array<string>
+     * @var array<UuidInterface>
      */
     private array $children;
     private string $description;
