@@ -29,13 +29,11 @@ final class Listener implements
     BeforeFirstTestHook,
     BeforeTestHook
 {
-    private Writer $writer;
-    private Lifecycle $storage;
+    private Lifecycle $lifecycle;
 
     public function __construct(string $outputDirectory, bool $deletePreviousResults = false)
     {
-        $this->writer = new Writer($outputDirectory, $deletePreviousResults);
-        $this->storage = Lifecycle::create();
+        $this->lifecycle = Lifecycle::create( new Writer($outputDirectory, $deletePreviousResults));
     }
 
     public function executeAfterIncompleteTest(string $test, string $message, float $time): void

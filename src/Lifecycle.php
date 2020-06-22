@@ -7,10 +7,16 @@ namespace Allure2Adapter;
 final class Lifecycle
 {
     public static self $instance;
+    private Writer $writer;
 
-    public static function create(): self
+    public function __construct(Writer $writer)
     {
-        self::$instance = new self();
+        $this->writer = $writer;
+    }
+
+    public static function create(Writer $writer): self
+    {
+        self::$instance = new self($writer);
         return self::$instance;
     }
 
